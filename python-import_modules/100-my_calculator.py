@@ -13,9 +13,9 @@ if __name__ == "__main__":
     elif operator == "-":
         print("{:d} - {:d} = {:d}".format(n1, n2, sub(n1, n2)))
     elif operator == "*":
-        print("{:d} - {:d} = {:d}".format(n1, n2, mul(n1, n2)))
+        print("{:d} * {:d} = {:d}".format(n1, n2, mul(n1, n2)))
     elif operator == "/":
-        print("{:d} - {:d} = {:d}".format(n1, n2, div(n1, n2)))
+        print("{:d} / {:d} = {:d}".format(n1, n2, div(n1, n2)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
