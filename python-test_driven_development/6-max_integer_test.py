@@ -1,59 +1,17 @@
 #!/usr/bin/python3
-
-"""Unittest for max_integer([..])
-
-"""
-
-import unittest
-
-max_integer = __import__('6-max_integer').max_integer
+from sys import argv
 
 
+def main():
+    print('{} argument'.format(len(argv) - 1), end='')
+    if len(argv) == 1:
+        print('s.')
+    elif len(argv) == 2:
+        print(':')
+    else:
+        print('s:')
+    for i in range(1, len(argv)):
+        print('{}: {}'.format(i, argv[i]))
 
-
-class TestMaxInteger(unittest.TestCase):
-
-    """Test cases for max_integer function."""
-
-
-
-
-    def test_integers(self):
-
-        """Test valid integers."""
-
-        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
-
-        self.assertEqual(max_integer([1, 3, 4, 2]), 4)
-
-        self.assertEqual(max_integer([-2, -6, -8, -4]), -2)
-
-        self.assertEqual(max_integer([10, -20, 30, -40]), 30)
-
-        self.assertEqual(max_integer([50]), 50)
-
-        self.assertEqual(max_integer([0, -5, -10]), 0)
-
-
-
-
-    def test_type(self):
-
-        """Test other compatible data types."""
-
-        self.assertEqual(max_integer("string"), 't')
-
-        self.assertEqual(max_integer((1, 2, 3, 4)), 4)
-
-        self.assertEqual(max_integer([1, 2, 3, float('inf')]), float('inf'))
-
-        self.assertEqual(max_integer([1, 2, 3, float('nan')]), 3)
-
-        self.assertEqual(max_integer(), None)
-
-
-
-
-if __name__ == '__main__':
-
-    unittest.main()
+if __name__ == "__main__":
+    main()
