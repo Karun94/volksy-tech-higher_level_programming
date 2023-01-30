@@ -1,2 +1,2 @@
---SQL
+-- first sql
 SHOW DATABASES;
